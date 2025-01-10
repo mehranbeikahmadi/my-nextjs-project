@@ -1,41 +1,42 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+/node_modules        # Ignore dependencies folder
+/.pnp                # Ignore Yarn Plug'n'Play files
 .pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+.yarn/*              # Ignore all Yarn-related files
+!.yarn/patches       # Allow specific patches folder
+!.yarn/plugins       # Allow specific plugins folder
+!.yarn/releases      # Allow specific releases folder
+!.yarn/versions      # Allow specific versions folder
 
 # testing
-/coverage
+/coverage            # Ignore test coverage output
 
 # next.js
-/.next/    # Ensure the .next folder is ignored (Next.js build output)
-/out/      # Ignore the output folder for static exports (next export)
+/.next/              # Ensure the .next folder is ignored (Next.js build output)
+/out/                # Ignore the output folder for static exports (next export)
 
 # production
-/build     # Ignore any custom build directory (if used)
+/build               # Ignore any custom build directory (if used)
 
 # misc
-.DS_Store  # macOS-specific system file
-*.pem      # Private key files (e.g., SSL keys)
+.DS_Store            # macOS-specific system file
+*.pem                # Private key files (e.g., SSL keys)
 
 # debug
-npm-debug.log*   # Ignore npm debug logs
-yarn-debug.log*  # Ignore Yarn debug logs
-yarn-error.log*  # Ignore Yarn error logs
-.pnpm-debug.log* # Ignore pnpm debug logs
+npm-debug.log*       # Ignore npm debug logs
+yarn-debug.log*      # Ignore Yarn debug logs
+yarn-error.log*      # Ignore Yarn error logs
+.pnpm-debug.log*     # Ignore pnpm debug logs
 
 # env files (can opt-in for committing if needed)
-.env*     # Ignore all environment files (e.g., .env, .env.local)
+/.env*               # Ignore all environment files (e.g., .env, .env.local)
 
 # vercel
-.vercel   # Ignore the .vercel folder for Vercel deployment metadata
+.vercel              # Ignore the .vercel folder for Vercel deployment metadata
 
 # typescript
-*.tsbuildinfo  # Ignore TypeScript build cache files
-next-env.d.ts  # Ignore auto-generated Next.js TypeScript types
+*.tsbuildinfo        # Ignore TypeScript build cache files
+next-env.d.ts        # Ignore auto-generated Next.js TypeScript types
+node_modules
